@@ -1,0 +1,13 @@
+.idea
+nbproject
+.buildpath
+.project
+.settings
+Thumbs.db
+.DS_Store
+/vendor
+phpunit.xml
+.phpunit.result.cache
+tests/_output/*
+composer.lock
+

@@ -1,0 +1,36 @@
+{
+  "name": "floor12/breadcrumbs-microdata",
+  "description": "Html breadcrumb with microdata generator.",
+  "type": "package",
+  "minimum-stability": "stable",
+  "keywords": [
+    "breadcrumbs",
+    "microdata",
+    "html",
+    "navigation"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "floor12",
+      "email": "floor12@floor12.net",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "floor12\\Breadcrumbs": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "floor12\\Breadcrumbs\\Tests": "tests"
+    }
+  }
+}
