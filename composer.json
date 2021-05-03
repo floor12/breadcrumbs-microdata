@@ -25,12 +25,12 @@
   },
   "autoload": {
     "psr-4": {
-      "floor12\\Breadcrumbs": "src"
+      "floor12\\Breadcrumbs\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "floor12\\Breadcrumbs\\Tests": "tests"
+      "floor12\\Breadcrumbs\\Tests\\": "tests"
     }
   }
 }
