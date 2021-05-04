@@ -39,7 +39,7 @@ class Breadcrumbs
         $position = 0;
         foreach ($this->elements as $url => $name) {
             $position++;
-            $element = $element = sprintf(self::HTML_SPAN, $name) . sprintf(self::HTML_META_POSITION, $position);
+            $element = sprintf(self::HTML_SPAN, $name) . sprintf(self::HTML_META_POSITION, $position);
             if (!is_numeric($url)) {
                 $element = sprintf(self::HTML_A, $url, $element);
             }
