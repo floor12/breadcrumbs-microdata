@@ -1,0 +1,32 @@
+ol#f12-breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+
+  li {
+    padding-right: 30px;
+    position: relative;
+
+    a {
+      font-weight: 400;
+    }
+  }
+
+  li:after {
+    content: "→";
+    opacity: 0.8;
+    position: absolute;
+    top: -4px;
+    right: 7px;
+    font-size: 120%;
+  }
+
+  li:last-child:after {
+    display: none;
+    content: "";
+  }
+}

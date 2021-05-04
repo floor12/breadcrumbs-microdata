@@ -16,6 +16,11 @@ class Breadcrumbs
     protected $mainId = 'f12-breadcrumbs';
     protected $elements = [];
 
+    public function __construct(array $elements = [])
+    {
+        $this->elements = $elements;
+    }
+
     public function addElement(string $name, string $url = null): self
     {
         $this->elements[$url] = $name;
