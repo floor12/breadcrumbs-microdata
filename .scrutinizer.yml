@@ -1,5 +1,8 @@
 build:
   nodes:
+    environment:
+      php:
+        version: 8
     coverage:
       tests:
         override:
