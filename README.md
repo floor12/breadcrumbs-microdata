@@ -54,7 +54,8 @@ use floor12\Breadcrumbs\Breadcrumbs;
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a data-pjax="0" itemprop="item" href="/first/second"><span itemprop="name">Second element 2</span>
             <meta itemprop="position" content="2">
-        </a></li>
+        </a>
+    </li>
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <span itemprop="name">Current</span>
         <meta itemprop="position" content="3">
