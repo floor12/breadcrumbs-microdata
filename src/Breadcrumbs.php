@@ -23,7 +23,10 @@ class Breadcrumbs
 
     public function addElement(string $name, string $url = null): self
     {
-        $this->elements[$url] = $name;
+        if ($url)
+            $this->elements[$url] = $name;
+        else
+            array_push($this->elements, $name);
         return $this;
     }
 
@@ -61,5 +64,10 @@ class Breadcrumbs
     {
         $this->mainId = $mainId;
         return $this;
+    }
+
+    public function getElements(): array
+    {
+        return $this->elements;
     }
 }

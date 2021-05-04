@@ -11,6 +11,33 @@ class BreadcrumbTest extends TestCase
         $this->assertNull($breadcrumbs->getHtml());
     }
 
+    public function testConstructor()
+    {
+        $itemsToTest = [
+            'url' => 'page1',
+            'page2',
+        ];
+        $breadcrumbs = new Breadcrumbs($itemsToTest);
+        $this->assertEquals($itemsToTest, $breadcrumbs->getElements());
+    }
+
+    public function testAddElement()
+    {
+        $breadcrumbs = new Breadcrumbs();
+        $breadcrumbs->addElement('First element 1', '/first');
+        $breadcrumbs->addElement('Second element 2', '/first/second');
+        $breadcrumbs->addElement('No link');
+        $breadcrumbs->addElement('Current');
+        $expectedResult = [
+            '/first' => 'First element 1',
+            '/first/second' => 'Second element 2',
+            'No link',
+            'Current',
+        ];
+        $this->assertEquals($expectedResult, $breadcrumbs->getElements());
+    }
+
+
     public function testDefaultCss()
     {
         $breadcrumbs = new Breadcrumbs();
@@ -41,7 +68,7 @@ class BreadcrumbTest extends TestCase
         $this->assertStringContainsString('id="test"', $breadcrumbs->getHtml());
     }
 
-    public function testSuccess()
+    public function testSuccessGenerated()
     {
         $breadcrumbs = new Breadcrumbs();
         $breadcrumbs->addElement('First element 1', '/first');
