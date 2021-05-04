@@ -4,6 +4,8 @@ build:
       environment:
         php:
           version: 8
+        variables:
+          XDEBUG_MODE: "coverage"
       tests:
         override:
           - command: ./vendor/bin/phpunit --coverage-clover coverage.xml
