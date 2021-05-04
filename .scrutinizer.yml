@@ -1,9 +1,9 @@
 build:
   nodes:
-    environment:
-      php:
-        version: 8
     coverage:
+      environment:
+        php:
+          version: 8
       tests:
         override:
           - command: ./vendor/bin/phpunit --coverage-clover coverage.xml
