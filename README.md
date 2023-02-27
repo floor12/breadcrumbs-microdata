@@ -8,7 +8,7 @@
 Add this package to your project with composer.
 
 ```bash
-composer require "floor12/breadcrumbs-microdada"
+composer require "floor12/breadcrumbs-microdata"
 ```
 
 ## Usage
